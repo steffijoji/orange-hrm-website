@@ -9,7 +9,10 @@ describe('Login', () => {
   })
 
   it.only('Login without username and password', () => {
-
+    login_page.checkUsernameField()
+    login_page.checkPasswordField()
+    login_page.clickLoginButton()
+    login_page.checkRequiredMessage('RequiredRequired')
   })
   
 })
