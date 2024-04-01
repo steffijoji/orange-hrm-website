@@ -17,9 +17,13 @@ describe('My Info', () => {
         my_info_page.accessMyInfoPage()
     })
 
-    it.only('Update Personal Details', () => {
+    it.only('Update Personal Details wiht valid data', () => {
         my_info_page.fillFirstName(faker.person.firstName())
         my_info_page.fillMiddleName(faker.person.middleName())
         my_info_page.fillLastName(faker.person.lastName())
+        my_info_page.fillEmployeeId(faker.number.int(999999))
+        my_info_page.fillOtherId(faker.number.int(999999))
+        my_info_page.fillDriversLicenseNumber(faker.number.int(999999999))
+        my_info_page.fillLicenseExpiryDate('2024-01-10')
     })
 })
